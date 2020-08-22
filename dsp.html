@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+  <h3>Sampled Signal</h3>
+  <p>$$ \hat{x}(t) = \sum_{-\infty}^{\infty} x(nT) \delta(t - nT) $$</p>
+  <h3>Discrete-Time Fourier Transform</h3>
+  <p>$$\begin{align}
+      \hat{X}(\Omega) &= \int_{-\infty}^{\infty} \hat{x}(t)
+                         e^{-j \Omega t} dt \\
+        &= \int_{-\infty}^{\infty}
+            \left[ \sum_{n = 0}^{\infty} x(nT) \delta(t - nT) \right]
+            e^{-j \Omega t} dt \\
+        &= \sum_{n = 0}^{\infty} x(nT) e^{-j \Omega nT}
+      \end{align}$$</p>
+  <p>$$ \omega = 2 \pi \frac{f}{f_s} = \frac{\Omega}{f_s} $$</p>
+  <p>$$\begin{align}
+      \hat{X}(\omega) &= \sum_{n = 0}^{\infty} x(nT) e^{-j \omega n} \\
+                      &= \sum_{n = 0}^{\infty} x[n] e^{-j \omega n}
+                          \quad \text{alternative notation} \\
+                      &= \sum_{n = 0}^{\infty} x_n e^{-j \omega n}
+      \end{align}$$</p>
+  <h3>Z Transform</h3>
+  <p>$$\begin{align}
+      \hat{X}(z)  &= \sum_{n = 0}^{\infty} x(nT) z^{-n} \\
+                  &= \sum_{n = 0}^{\infty} x[n] z^{-n}
+                      \quad \text{alternative notation} \\
+                  &= \sum_{n = 0}^{\infty} x_n z^{-n}
+      \end{align}$$</p>
+  <h3>Transfer Function</h3>
+  <p>
+    $$ Y(z) = \frac{ b_0 + b_1 z^{-1} + b_2 z^{-2} }
+                   {   1 + a_1 z^{-1} + a_2 z^{-2} } X(z) $$</p>
+  <h3>Difference Equation</h3>
+  <p>$$\begin{align}
+      y_n + a_1 y_{n-1} + a_2 y_{n-2} &= b_0 + b_1 x_{n-1} + b_2 x_{n-2} \\
+      y_n &= b_0 + b_1 x_{n-1} + b_2 x_{n-2} - a_1 y_{n-1} - a_2 y_{n-2}
+      \end{align}$$</p>
+</body>
+</html>

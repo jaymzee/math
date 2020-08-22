@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+ <div>
+  <p>
+    <h3>Gradient, Divergence, and Curl in cartesian coordinates</h3>
+    `grad phi(x,y,z) = hati (delphi)/(delx) +
+                       hatj (delphi)/(dely) +
+                       hatk (delphi)/(delz)`<br>
+
+    `grad * bbA = (delA_x)/(delx) + (delA_y)/(dely) + (delA_z)/(delz)`<br>
+
+    `grad xx bbA = |[     hati   ,     hatj   ,     hatk    ],
+                    [ del/(delx) , del/(dely) , del/(delz)  ],
+                    [     A_x    ,     A_y    ,     A_z     ]|`
+  </p>
+  <p>
+    <h3>Gradient, Divergence, and Curl generalized to curvilinear coordinates</h3>
+    `grad u(x_1,x_2,x_3) = sum_(i=1)^3 hate_i 1/h_i (delu)/(delx_i)`<br>
+
+    `grad * bbA = 1/(h_1 h_2 h_3)
+                  [(del(h_2 h_3 A_1))/(delx_1) +
+                   (del(h_1 h_3 A_2))/(delx_2) +
+                   (del(h_1 h_2 A_3))/(delx_3)]`<br>
+
+    `grad xx bbA = 1/(h_1 h_2 h_3)
+                   |[  hate_1 h_1  ,  hate_2 h_2  ,  hate_3 h_3  ],
+                    [ del/(delx_1) , del/(delx_2) , del/(delx_3) ],
+                    [   h_1 A_1    ,   h_2 A_2    ,   h_3 A_3    ]|`<br>
+    in cartesian coordinates `x_1 = x`, `x_2 = y`, `x_3 = z` and
+    `h_1 = h_2 = h_3 = 1` and 
+    `hate_1 = hati`, `hate_2 = hatj`, `hate_3 = hatk`<br>
+    in cylindrical coordinates `x_1 = r`, `x_2 = phi`, `x_3 = z` and
+    `h_1 = 1`, `h_2 = r`, `h_3 = 1` and
+    `hate_1 = bba_r`, `hate_2 = bba_phi`, `hate_3 = bba_z`<br>
+    in spherical coordinates `x_1 = R`, `x_2 = theta`, `x_3 = phi` and
+    `h_1 = 1`, `h_2 = R`, `h_3 = R sin theta` and
+    `hate_1 = bba_R`, `hate_2 = bba_theta`, `hate_3 = bba_phi`<br>
+  </p>
+  <p>
+     <h3>Electrodynamics</h3>
+     `grad * bbD = ρ_V`<br>
+     `grad * bbB = 0`<br>
+     `grad xx bbE = -(delbbB)/(delt)`<br>
+     `grad xx bbH = (delbbD)/(delt) + bbJ`<br>
+  </p>
+  <p>
+     `bbE = -grad bbV`<br>
+     `bbD = ε_0 bbE + bbP`<br>
+     `bbD = ε_0 bbE + chi_e ε_0 bbE = ε_0 ε_r bbE = ε bbE`
+  </p>
+  <p>
+     `bbB = mu_0(bbH + bbM)`<br>
+     `bbB = mu_0 bbH + mu_0 chi_m bbH = mu_0 mu_r bbH = mu bbH`
+  </p>
+  <p>`bbF = q(bbE + bbv xx bbB)`</p>
+ <div>
+</body>
+</html>

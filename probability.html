@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+  <h1>Probability</h1>
+  <h3>Axioms of probability</h3>
+  <p>
+    A <i>probability measure</i> is a function that assigns a real number
+    `P(E)` to each event `E`, for which the following conditions
+    (called "axioms") hold:
+    <ol>
+      <li>For any event `E, P[E] >= 0`</li>
+      <li>The measure of the entire space is `P[S] = 1`</li>
+      <li>For any two mutually exclusive events `E_1` and `E_2`,
+          `E_1 E_2 = O/`, `P[E_1 uu E_2] = P[E_1] + P[E_2]`</li>
+    </ol>
+  </p>
+  <h3>Definitition of statistical independence</h3>
+  <p>
+    Two events, `A` and `B`, defined on a sample space of a random experiment
+    are <i>independent</i> if and only if
+      $$ P[A \cap B] = P[A]P[B] $$
+    Events `A` and `B` are independent if and only if the probability of their
+    intersection is the product `P[A]P[B]`. This means that conditional
+    probabilities may be written as
+      $$ P[A \, | \, B] = P[A] $$
+      $$ P[B \, | \, A] = P[B] $$
+  </p>
+  <p>
+    A random variable is a function that assigns a numerical value to each
+    outcome in the sample space of a random experiment.
+  </p>
+  <p>
+    `P[X = x]` is the probability random variable `X` takes on the value x.
+    `Pr[X = x], Prob[X = x], bbbP[X = x]` are alternative notations for `P`.
+    <br>There are also different notational conventions for events e.g.
+    `P(X = x)`, `P[X = x]`, `P{X = x}`, `P({X = x})` are all equivalent.
+  </p>
+  <p>
+    `E[X]` is the expected value of `X` or expectation of `X`.<br>
+    `var(X)` is the variance of `X` (expected value of the square of deviations)
+      $$ E[(X - E[X])^2]=E[X^2] - (E[X])^2 \tag{1} $$
+    `cov(X,Y)` is the covariance of `X` and `Y`
+      $$ E[XY] - E[X]E[Y] \tag{2} $$
+    The PMF or probability mass function `p_X(x)` is the probability that the
+    experimental value of the random variable `X` is equal to `x` on a single
+    outcome of the experiment.
+      $$ 0 \leq p_X(x) \leq 1 \quad \text{for all $x$} $$
+      $$ \sum_{x} p_X(x) = 1 $$
+    The PDF or probability density function `f_X(x)` is defined by
+      $$ \mathbb{P}[a < X \leq b] = \int_{a}^{b} f_X(x) \, dx $$
+    The CDF or cumulative distribution function `F_X(x)` is defined by
+      $$ F_X(x) = \mathbb{P}[X \leq x] = \int_{-\infty}^{x} f_X(y) \, dy $$
+  </p>
+
+
+</body>
+</html>

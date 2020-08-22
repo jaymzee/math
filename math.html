@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+  <h3>rectangular diagrams</h3>
+  <div>
+    \( \require{\AMScd} \)
+    $$\begin{CD}
+      A    @&lt;f<<    B    @>g>>     C      \\
+      @.             @VhVV          @AAcA    \\
+           @.          D    @>>d>     E
+      \end{CD} $$
+  </div>
+  <h3>align equations</h3>
+  <p>
+    $$\begin{align}
+      x^2 + 3x + 2 &= 0 \\
+      (x + 1)(x + 2) &= 0 \\
+      x &= -1, \\
+      x &= -2
+      \end{align} $$
+  </p>
+  <h3>matrices and vectors</h3>
+  <p>`([a,b],[c,d])((2),(3))`</p>
+  <p>`[[a,b],[c,d]][[2],[3]]`</p>
+  <p>`|[a,b],[c,d]| = ad - bc` 2x2 determinant</p>
+  <h3>chain rule</h3>
+  <p>
+    given `f(x,y,z)` where `x`, `y`, and `z` are functions
+    `x(t)`,`y(t)`, and `z(t)` respectively:<br>
+    `d/dt f(x,y) = (del f(x,y,z))/(del x) dx/dt +
+                   (del f(x,y,z))/(del y) dy/dt +
+                   (del f(x,y,z))/(del z) dz/dt`
+  </p>
+  <p>
+    $$
+    \frac{d}{dt} f(x,y) = 
+      \frac{\partial f(x,y,z)}{\partial x} \frac{dx}{dt} +
+      \frac{\partial f(x,y,z)}{\partial y} \frac{dy}{dt} +
+      \frac{\partial f(x,y,z)}{\partial z} \frac{dz}{dt}
+    $$
+  </p>
+</body>
+</html>
